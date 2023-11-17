@@ -6,7 +6,7 @@
 /*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 17:53:30 by amousaid          #+#    #+#             */
-/*   Updated: 2023/11/15 16:21:53 by mousaid          ###   ########.fr       */
+/*   Updated: 2023/11/17 22:45:07 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	s = src;
 	if (!src && !dest)
 		return (NULL);
+	if (dest == src)
+		return (dest);
 	if (dest <= src || dest >= (src + n))
 		ft_memcpy(dest, src, n);
 	else

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: amousaid <amousaid@student.42.fr>          +#+  +:+       +#+         #
+#    By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/02 11:15:22 by mousaid           #+#    #+#              #
-#    Updated: 2023/11/16 20:27:48 by amousaid         ###   ########.fr        #
+#    Updated: 2023/11/18 00:30:13 by mousaid          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,40 +47,39 @@ SRC= ft_isalpha.c\
      ft_memcpy.c\
 
 BONUS_SRC= ft_lstnew_bonus.c\
-	   ft_lstadd_front_bonus.c\
-	   ft_lstsize_bonus.c\
-	   ft_lstlast_bonus.c\
-	   ft_lstadd_back_bonus.c\
-	   ft_lstdelone_bonus.c\
-          ft_lstclear_bonus.c\
-          ft_lstiter_bonus.c\
-	   ft_lstmap_bonus.c\
- 
+       ft_lstadd_front_bonus.c\
+       ft_lstsize_bonus.c\
+       ft_lstlast_bonus.c\
+       ft_lstadd_back_bonus.c\
+       ft_lstdelone_bonus.c\
+           ft_lstclear_bonus.c\
+           ft_lstiter_bonus.c\
+       ft_lstmap_bonus.c
+
 OBJ= $(SRC:.c=.o)
 BOBJ= $(BONUS_SRC:.c=.o)
 CC= cc
-CC_FLAGS= -c -Wall -Wextra  -Werror 
+CFLAGS= -Wall -Wextra  -Werror
 RM= rm -f
 AR= ar -rc
 
 .PHONY: all clean fclean re bonus
 
-%.o: %.c
-	$(CC) $(CC_FLAGS) $< -o $@
-
 $(NAME): $(OBJ)
-	$(AR) $(NAME) $(OBJ)
+    $(AR) $(NAME) $(OBJ)
 
 all: $(NAME)
 
 
 clean:
-	$(RM) $(OBJ) $(BOBJ)
+    $(RM) $(OBJ) $(BOBJ)
 
 fclean: clean
-	$(RM) $(NAME)
+    $(RM) $(NAME)
 
 re: fclean all
 
+$(BOBJ):
+    $(CC) $(CFLAGS)    -c $(BONUS_SRC)
+    $(AR) $(NAME) $(BOBJ)
 bonus: $(BOBJ)
-	$(AR) $(NAME) $(BOBJ)

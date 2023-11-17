@@ -3,24 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amousaid <amousaid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:02:18 by amousaid          #+#    #+#             */
-/*   Updated: 2023/11/11 20:00:44 by amousaid         ###   ########.fr       */
+/*   Updated: 2023/11/17 23:55:54 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-static size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -28,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	src_len;
 	int		i;
 
+	if (!dst && !size)
+		return (ft_strlen(src));
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	i = 0;
@@ -41,3 +33,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dst_len + i] = 0;
 	return (dst_len + src_len);
 }
+// int main()
+// {
+// 	char a[50] = "helloworld";
+// 	char b[50] = "head your ass please";
+// 	printf("%ld\n",ft_strlcat(NULL,b,NULL));
+// 	printf("%ld",strlcat(NULL,b,NULL));
+
+// }

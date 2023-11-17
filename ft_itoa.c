@@ -6,7 +6,7 @@
 /*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 00:49:33 by amousaid          #+#    #+#             */
-/*   Updated: 2023/11/15 16:16:31 by mousaid          ###   ########.fr       */
+/*   Updated: 2023/11/17 17:47:11 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static size_t	ft_size(long n)
 	return (sum);
 }
 
-char	*is_positive(long nb, size_t size, char *str)
+static char	*is_positive(long nb, size_t size, char *str)
 {
 	if (nb < 0)
 	{

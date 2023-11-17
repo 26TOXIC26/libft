@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amousaid <amousaid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 21:13:47 by amousaid          #+#    #+#             */
-/*   Updated: 2023/11/16 22:01:34 by amousaid         ###   ########.fr       */
+/*   Updated: 2023/11/17 23:53:09 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
-	size_t total;
+	size_t	total;
+
 	total = size * count;
-	if (count && size &&  ((total / size) != (count)))
+	if (size && ((total / size) != (count)))
 		return (NULL);
 	ptr = malloc(total);
 	if (ptr == NULL)
@@ -27,36 +28,35 @@ void	*ft_calloc(size_t count, size_t size)
 }
 // int main()
 // {
-//     size_t count = 4;
+//     size_t c = 4;
 //     size_t size = 4;
 
-//     // Allocate memory using ft_calloc
-//     int *arr = (int *)ft_calloc(count, size);
+//     int *arr = (int *)ft_calloc(c, size);
 
 //     if (arr == NULL) {
-//         printf("Memory allocation failed\n");
-//         return 1;  // Exit with an error code
+//         printf("ma t aloccatch\n");
+//         return 1;
 //     }
 // 	size_t i = 0;
-//     // Initialize the allocated memory (optional)
-//     while (i < count)
+//     // 3mr dakch li alokiti b values
+//     while (i < c)
 // 	{
 //         arr[i] = i + 1;
 // 		i++;
 //     }
 
-//     // Print the values in the allocated memory
+//     //tb3 dakchi li allociti
 // 	i = 0;
-//     printf("Allocated memory contents: ");
-//     while ( i < count)
+//     printf("dakchi li alokiti ha hwa: ");
+//     while ( i < c)
 // 	{
 //         printf("%d ", arr[i]);
 // 		i++;
 //     }
 //     printf("\n");
 
-//     // Free the allocated memory
+//     // Free l alloc
 //     free(arr);
 
-//     return 0;  // Exit successfully
+//   return 0;  
 // }

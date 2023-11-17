@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amousaid <amousaid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 20:23:17 by amousaid          #+#    #+#             */
-/*   Updated: 2023/11/16 23:23:47 by amousaid         ###   ########.fr       */
+/*   Updated: 2023/11/17 22:44:51 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static char	**ft_free_all(char **ptr, size_t end)
 	return (NULL);
 }
 
-char	**mini_split(char const *s, char **ptr, char c, size_t x)
+static char	**mini_split(char const *s, char **ptr, char c, size_t x)
 {
 	while (*s)
 	{
@@ -93,11 +93,19 @@ char	**ft_split(char const *s, char c)
 	size_t	total;
 
 	x = 0;
+	if (s == NULL)
+		return (NULL);
 	total = ft_countword((char *)s, c);
 	ptr = malloc(((total + 1) * sizeof(char *)));
 	if (!ptr)
 		return (NULL);
-	if (!s)
-		return (ptr[x] = NULL, ptr);
 	return (mini_split(s, ptr, c, x));
 }
+// int main()
+// {
+// 	const char *str = "(-1-808-784-7895)";
+// 	char **split_array = ft_split(str, '-');
+// 	int i = 0;
+// 	while(split_array[i])
+// 		printf("%s",split_array[i++]);
+// }

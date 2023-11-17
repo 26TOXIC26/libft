@@ -6,7 +6,7 @@
 /*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:12:58 by mousaid           #+#    #+#             */
-/*   Updated: 2023/11/12 21:29:51 by mousaid          ###   ########.fr       */
+/*   Updated: 2023/11/17 22:44:59 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,8 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
+// int main()
+// {
+// 	int fd = open("text.txt",O_CREAT | O_WRONLY,777);
+// 	ft_putstr_fd("hello world",fd);
+// }
