@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amousaid <amousaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:43:17 by mousaid           #+#    #+#             */
-/*   Updated: 2023/11/17 20:35:50 by mousaid          ###   ########.fr       */
+/*   Updated: 2023/11/18 02:00:02 by amousaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,23 +38,32 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	new_node->next = NULL;
 	return (head);
 }
-// void *multiplyByTwo(void *data)
+// void *zid_wahd(void *data)
 // {
-//     int *num = (int *)data;
-//     int *result = (int *)malloc(sizeof(int));
+// 	int i = 0;
+//     char *num = (char *)data;
+//     char *result = malloc(sizeof(data));
 //     if (!result)
+// 	{
 //         return (NULL);
-//     *result = (*num) + 1;
+// 	}
+// 	while (num[i])
+// 	{
+// 		result[i] = num[i] + 1;
+// 		i++;
+// 	}
+	
+    
 //     return (result);
 // }
 
-// // A function to be used as the deletion function
-// void deleteInt(void *data)
+// // ft li radi nfree biha
+// void freedata(void *data)
 // {
 //     free(data);
 // }
 
-// // A function to print the content of the linked list
+// // ft li radi nprantiw biha result
 // void printList(t_list *list)
 // {
 //     while (list != NULL)
@@ -66,25 +75,25 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // }
 // int main()
 // {
-//     // Create a linked list
-//     t_list *originalList = ft_lstnew(ft_strdup("Ana"));
-//     ft_lstadd_back(&originalList, ft_lstnew(ft_strdup("Aba")));
-//     ft_lstadd_back(&originalList, ft_lstnew(ft_strdup("Ara")));
+//     // 9ad new list
+//     t_list *firstlist = ft_lstnew(ft_strdup("Ana"));
+//     ft_lstadd_back(&firstlist, ft_lstnew(ft_strdup("Aba")));
+//     ft_lstadd_back(&firstlist, ft_lstnew(ft_strdup("Ara")));
 
 //     // Print the original list
-//     printf("Original list: ");
-//     printList(originalList);
+//     printf("firstlist: ");
+//     printList(firstlist);
 
-//     // Use ft_lstmap to create a new list by duplicating each string
-//     t_list *newList = ft_lstmap(originalList, multiplyByTwo, deleteInt);
+//     // khdm b lstmap hna
+//     t_list *newList = ft_lstmap(firstlist, zid_wahd, freedata);
 
 //     // Print the new list
 //     printf("New list (duplicated strings): ");
 //     printList(newList);
 
-//     // Free the memory for the original and new lists
-//     ft_lstclear(&originalList, free);
-//     ft_lstclear(&newList, deleteInt);
+//     // Free lmemory li allociti
+//     ft_lstclear(&firstlist, free);
+//     ft_lstclear(&newList, freedata);
 
 //     return (0);
 // }
