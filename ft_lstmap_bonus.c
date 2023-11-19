@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amousaid <amousaid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:43:17 by mousaid           #+#    #+#             */
-/*   Updated: 2023/11/18 02:00:02 by amousaid         ###   ########.fr       */
+/*   Updated: 2023/11/19 01:32:01 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // 		result[i] = num[i] + 1;
 // 		i++;
 // 	}
-	
-    
+
 //     return (result);
 // }
 
@@ -63,16 +62,16 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 //     free(data);
 // }
 
-// // ft li radi nprantiw biha result
-// void printList(t_list *list)
-// {
-//     while (list != NULL)
-//     {
-//         printf("%s ", (char *)list->content);
-//         list = list->next;
-//     }
-//     printf("\n");
-// }
+// ft li radi nprantiw biha result
+void	printList(t_list *list)
+{
+	while (list != NULL)
+	{
+		printf("%s ", (char *)list->content);
+		list = list->next;
+	}
+	printf("\n");
+}
 // int main()
 // {
 //     // 9ad new list

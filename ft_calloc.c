@@ -35,7 +35,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 //     if (arr == NULL) {
 //         printf("ma t aloccatch\n");
-//         return 1;
+//         return (1);
 //     }
 // 	size_t i = 0;
 //     // 3mr dakch li alokiti b values
@@ -58,5 +58,5 @@ void	*ft_calloc(size_t count, size_t size)
 //     // Free l alloc
 //     free(arr);
 
-//   return 0;  
+//   return (0);
 // }

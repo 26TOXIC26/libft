@@ -6,7 +6,7 @@
 /*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 20:33:09 by amousaid          #+#    #+#             */
-/*   Updated: 2023/11/17 17:19:32 by mousaid          ###   ########.fr       */
+/*   Updated: 2023/11/18 21:33:34 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (c >= 256)
-		c %= 256;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (unsigned char)c)
 			return ((char *)s);
 		s++;
 	}
-	if (*s == c)
+	if (*s == (unsigned char)c)
 		return ((char *)s);
 	return (NULL);
 }

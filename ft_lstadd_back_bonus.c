@@ -6,7 +6,7 @@
 /*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 06:45:01 by mousaid           #+#    #+#             */
-/*   Updated: 2023/11/17 21:02:40 by mousaid          ###   ########.fr       */
+/*   Updated: 2023/11/19 01:49:50 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 			*lst = new;
 		else
 		{
-			head = ft_lstlast(*(lst));
+			head = ft_lstlast(*lst);
 			head->next = new;
 		}
 	}
@@ -42,6 +42,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 //     ft_lstadd_front(&head, node2);
 //     ft_lstadd_front(&head, node1);
 //     ft_lstadd_back(&head, node4);
-//     t_list *end = ft_lstlast(head);
-//     printf("%d\n", *(int *)end->content);
+//     printf("%d\n", *(int *)ft_lstlast(head)->content);
 // }

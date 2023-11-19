@@ -51,4 +51,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 // 	char *missing_string = ft_strjoin(NULL, str2);
 // 	printf("%s", missing_string);
 // 	printf("\n");
-// }	
+// }

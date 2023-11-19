@@ -6,7 +6,7 @@
 /*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:10:37 by mousaid           #+#    #+#             */
-/*   Updated: 2023/11/12 21:12:41 by mousaid          ###   ########.fr       */
+/*   Updated: 2023/11/19 06:32:38 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	if (fd >= 0)
+		write(fd, &c, 1);
 }

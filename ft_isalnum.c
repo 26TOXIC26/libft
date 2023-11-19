@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amousaid <amousaid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:02:09 by amousaid          #+#    #+#             */
-/*   Updated: 2023/11/04 19:03:07 by amousaid         ###   ########.fr       */
+/*   Updated: 2023/11/19 01:41:58 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalnum(int c)
 {
-	if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z') || (c >= 'A'
-			&& c <= 'Z'))
-		return (1);
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (8);
 	return (0);
 }

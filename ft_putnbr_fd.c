@@ -6,7 +6,7 @@
 /*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:17:36 by mousaid           #+#    #+#             */
-/*   Updated: 2023/11/14 17:37:00 by mousaid          ###   ########.fr       */
+/*   Updated: 2023/11/19 06:37:03 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,19 @@ void	ft_putnbr_fd(int n, int fd)
 	long	nb;
 
 	nb = n;
-	if (nb < 0)
+	if (fd >= 0)
 	{
-		ft_putchar_fd('-', fd);
-		nb = nb * -1;
+		if (nb < 0)
+		{
+			ft_putchar_fd('-', fd);
+			nb = nb * -1;
+		}
+		if (nb >= 10)
+		{
+			ft_putnbr_fd(nb / 10, fd);
+			ft_putnbr_fd(nb % 10, fd);
+		}
+		else
+			ft_putchar_fd(nb + 48, fd);
 	}
-	if (nb >= 10)
-	{
-		ft_putnbr_fd(nb / 10, fd);
-		ft_putnbr_fd(nb % 10, fd);
-	}
-	else
-		ft_putchar_fd(nb + 48, fd);
 }

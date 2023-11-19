@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 09:29:32 by mousaid           #+#    #+#             */
-/*   Updated: 2023/11/14 11:20:06 by mousaid          ###   ########.fr       */
+/*   Updated: 2023/11/19 02:08:50 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,15 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
 
-	if (lst)
+	if (!lst || !del || !(*lst))
+		return ;
+	while (*lst)
 	{
-		while (*lst)
-		{
-			temp = (*lst)->next;
-			ft_lstdelone(*lst, del);
-			*lst = temp;
-		}
-		*lst = NULL;
+		temp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = temp;
 	}
+	*lst = NULL;
 }
 // void del(void *content)
 // {

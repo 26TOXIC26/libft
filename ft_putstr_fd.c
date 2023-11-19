@@ -6,7 +6,7 @@
 /*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:12:58 by mousaid           #+#    #+#             */
-/*   Updated: 2023/11/17 22:44:59 by mousaid          ###   ########.fr       */
+/*   Updated: 2023/11/19 06:35:00 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
+		int i;
 
-	i = 0;
-	while (s[i])
+	if (fd >= 0)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		i = 0;
+		while (s[i])
+		{
+			write(fd, &s[i], 1);
+			i++;
+		}
 	}
 }
 // int main()
