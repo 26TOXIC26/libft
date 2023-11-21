@@ -6,7 +6,7 @@
 /*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 20:26:04 by amousaid          #+#    #+#             */
-/*   Updated: 2023/11/17 23:55:11 by mousaid          ###   ########.fr       */
+/*   Updated: 2023/11/19 20:10:28 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putchar_fd(char c, int fd);
-char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+// bonus part
 typedef struct s_list
 {
 	void			*content;

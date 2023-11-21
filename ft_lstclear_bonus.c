@@ -6,7 +6,7 @@
 /*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 09:29:32 by mousaid           #+#    #+#             */
-/*   Updated: 2023/11/19 02:08:50 by mousaid          ###   ########.fr       */
+/*   Updated: 2023/11/21 20:12:55 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 // void del(void *content)
 // {
 //     free(content);
-//     printf("rani wslt lhna\n");
 //     content = NULL;
 // }
 // int main()
@@ -43,14 +42,16 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 //     t_list *node2 = ft_lstnew(pt2);
 //     t_list *node3 = ft_lstnew(pt3);
 //     ft_lstadd_back(&head, node1);
-//     ft_lstadd_back(&head, node2);
-//     ft_lstadd_back(&head, node3);
-//     printf("%p\n", head -> content);
-//     printf("%p\n", head -> next -> content);
-//     printf("%p\n", head -> next -> next -> content);
-//     ft_lstdelone(head, del);
-
-//     printf("%d\n", *((char *)head ->content));
-//     printf("%p\n", head -> next -> content);
-//     printf("%p\n", head -> next -> next -> content);
+// 	ft_lstadd_back(&head, node2);
+// 	ft_lstadd_back(&head, node3);
+// 	printf("%s", (char *)head -> content);
+// 	printf("\n");
+//     printf("%s", (char *)head -> next -> content);
+// 	printf("\n");
+//     printf("%s", (char *)head -> next -> next -> content);
+// 	printf("\n");
+//     ft_lstclear(&head, del);
+//     printf("%s\n", (char *)head ->content);
+//     printf("%s\n", (char *)head -> next -> content);
+//     printf("%s\n", (char *)head -> next -> next -> content);
 // }

@@ -6,7 +6,7 @@
 /*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:14:33 by mousaid           #+#    #+#             */
-/*   Updated: 2023/11/19 06:33:17 by mousaid          ###   ########.fr       */
+/*   Updated: 2023/11/20 00:46:45 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (fd >= 0)
+	if (fd >= 0 && s)
 	{
 		ft_putstr_fd(s, fd);
 		ft_putchar_fd('\n', fd);

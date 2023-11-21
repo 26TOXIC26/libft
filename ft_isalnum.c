@@ -6,13 +6,13 @@
 /*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:02:09 by amousaid          #+#    #+#             */
-/*   Updated: 2023/11/19 01:41:58 by mousaid          ###   ########.fr       */
+/*   Updated: 2023/11/19 20:13:42 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
+	if ((c > 64 && c < 91) || (c > 96 && c < 123) || (c >= 48 && c <= 57))
 		return (8);
 	return (0);
 }

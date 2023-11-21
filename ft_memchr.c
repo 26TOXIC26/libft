@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amousaid <amousaid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 21:00:21 by amousaid          #+#    #+#             */
-/*   Updated: 2023/11/06 22:04:33 by amousaid         ###   ########.fr       */
+/*   Updated: 2023/11/19 21:01:52 by mousaid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+// int main()
+// {
+// 	// char str[]= "hello world";
+// 	printf("%s", (char *)memchr(NULL, 'w', 12));
+// }
