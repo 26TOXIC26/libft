@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/20 16:21:07 by mousaid           #+#    #+#              #
-#    Updated: 2023/11/21 20:31:27 by mousaid          ###   ########.fr        #
+#    Created: 2023/11/03 16:21:07 by mousaid           #+#    #+#              #
+#    Updated: 2023/11/22 03:14:47 by mousaid          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ $(NAME): $(OBJS)
 bonus: $(BONUS_OBJS)
 
 .c.o:
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $<
 	ar -rc $(NAME) $@
 
 clean:
