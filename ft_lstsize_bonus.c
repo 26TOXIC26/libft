@@ -28,19 +28,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (result);
 }
-// int main()
-// {
-//     int a = 15;
-//     int b = 45;
-//     int c = 785;
-//     t_list *head = NULL;
-//     t_list *node1 = ft_lstnew(&a);
-//     t_list *node2 = ft_lstnew(&b);
-//     t_list *node3 = ft_lstnew(&c);
-//     ft_lstadd_front(&head, node3);
-//     ft_lstadd_front(&head, node2);
-//     ft_lstadd_front(&head, node1);
-
-//     printf("%d\n", ft_lstsize(head));
-
-// }

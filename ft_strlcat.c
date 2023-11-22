@@ -33,11 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dst_len + i] = 0;
 	return (dst_len + src_len);
 }
-// int main()
-// {
-// 	char a[50] = "helloworld";
-// 	char b[50] = "head your ass please";
-// 	printf("%ld\n",ft_strlcat(NULL,b,NULL));
-// 	printf("%ld",strlcat(NULL,b,NULL));
-
-// }

@@ -26,37 +26,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(ptr, total);
 	return (ptr);
 }
-// int main()
-// {
-//     size_t c = 4;
-//     size_t size = 4;
-
-//     int *arr = (int *)ft_calloc(c, size);
-
-//     if (arr == NULL) {
-//         printf("ma t aloccatch\n");
-//         return (1);
-//     }
-// 	size_t i = 0;
-//     // 3mr dakch li alokiti b values
-//     while (i < c)
-// 	{
-//         arr[i] = i + 1;
-// 		i++;
-//     }
-
-//     //tb3 dakchi li allociti
-// 	i = 0;
-//     printf("dakchi li alokiti ha hwa: ");
-//     while ( i < c)
-// 	{
-//         printf("%d ", arr[i]);
-// 		i++;
-//     }
-//     printf("\n");
-
-//     // Free l alloc
-//     free(arr);
-
-//   return (0);
-// }
