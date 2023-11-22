@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mousaid <mousaid@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amousaid <amousaid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 21:13:47 by amousaid          #+#    #+#             */
 /*   Updated: 2023/11/17 23:53:09 by mousaid          ###   ########.fr       */
