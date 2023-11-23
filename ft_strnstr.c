@@ -6,7 +6,7 @@
 /*   By: amousaid <amousaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 18:53:33 by amousaid          #+#    #+#             */
-/*   Updated: 2023/11/22 08:53:44 by amousaid         ###   ########.fr       */
+/*   Updated: 2023/11/23 03:44:05 by amousaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@ char	*ft_strnstr(const char *str, const char *to_finde, size_t len)
 	size_t	check;
 	size_t	to_finde_len;
 
+	if (!str && !len)
+		return (NULL);
 	i = 0;
 	if (!*to_finde)
 		return ((char *)str);
 	to_finde_len = ft_strlen(to_finde);
-	if (!str && !len)
-		return (NULL);
+	
 	while (str[i] && to_finde_len <= len - i)
 	{
 		check = 0;

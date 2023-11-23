@@ -6,7 +6,7 @@
 #    By: amousaid <amousaid@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/04 10:31:55 by amousaid          #+#    #+#              #
-#    Updated: 2023/11/23 01:52:20 by amousaid         ###   ########.fr        #
+#    Updated: 2023/11/23 04:03:53 by amousaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,7 +83,3 @@ $(BOBJ): $(BONUS_SRC)
 	$(AR) $(NAME) $(BOBJ)
 
 bonus: $(BOBJ)
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
