@@ -6,7 +6,7 @@
 /*   By: amousaid <amousaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 19:58:43 by amousaid          #+#    #+#             */
-/*   Updated: 2023/11/22 08:58:59 by amousaid         ###   ########.fr       */
+/*   Updated: 2023/11/24 01:01:51 by amousaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,20 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	total;
 
 	total = size * count;
-	if (size && ((total / size) != (count)))
-		return (NULL);
-	ptr = malloc(total);
-	if (ptr == NULL)
-		return (NULL);
-	ft_bzero(ptr, total);
+	if (total == 0)
+	{
+		ptr = malloc(1);
+		((char *)ptr)[0] = 0;
+	}
+	else
+	{
+		
+		if (size && ((total / size) != (count)))
+			return (NULL);
+		ptr = malloc(total);
+		if (ptr == NULL)
+			return (NULL);
+		ft_bzero(ptr, total);
+	}
 	return (ptr);
 }
